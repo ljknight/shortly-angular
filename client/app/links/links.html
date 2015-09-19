@@ -1,3 +1,16 @@
 <div id='container' ng-controller="LinksController">
-<!--   <div ng-init="$scope.getLinks()">{{ $scope.data }}</div> -->
+<nav class='navigation'> 
+<ul>
+  <li><a href='#/links'>Links</a></li>
+  <li><a href='#/shorten'>Shorten</a></li>
+</ul>
+</nav>
+  <ul>
+    <li ng-repeat="link in data.links track by $index">{{ link.title }}
+    {{ link.url }}
+    {{ link.base_url + '/' + link.code }}
+    Visits: {{ link.visits }}
+    </li>
+
+  </ul>
 </div>
