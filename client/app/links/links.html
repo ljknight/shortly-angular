@@ -6,8 +6,9 @@
   <li><a href='#/signin'>Log Out</a></li>
 </ul>
 </nav>
+  <input type="text" ng-model="search" placeholder="filter"></input>
   <ul>
-    <li class="link" ng-repeat="link in data.links track by $index">
+    <li class="link" ng-repeat="link in data.links | filter:search | orderBy: '-visits'">
     <img src="../assets/redirect_icon.png" />
       <div class="info">
         <div class="visits">Visits: <div class="count">{{ link.visits }}</div></div>

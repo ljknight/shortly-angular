@@ -1,11 +1,12 @@
 angular.module('shortly.services', [])
 
 .factory('Links', function ($http) {
-    var getLinks = function () {
+    
+  var getLinks = function () {
     return $http({
       method: 'GET',
       url: '/api/links'
-    })
+    }) // returns a promise
     .then(function (resp) {
       return resp.data;
     });
@@ -21,6 +22,8 @@ angular.module('shortly.services', [])
       return resp.data;
     });
   };
+  
+  // this is the return from the factory Links function
   return {
     getLinks: getLinks,
     addLink: addLink
