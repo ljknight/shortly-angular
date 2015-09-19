@@ -14,6 +14,4 @@ module.exports = function (app) {
     .post(linksController.newLink);
 
   app.get('/:code', linksController.navToLink);
-  // app.get('/links', linksController.allLinks);
-  // app.post('/shorten', linksController.newLink);
 };

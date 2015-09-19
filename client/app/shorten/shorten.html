@@ -3,12 +3,17 @@
   <ul>
     <li><a href='#/links'>Links</a></li>
     <li><a href='#/shorten'>Shorten</a></li>
+    <li><a href='#/signin'>Log Out</a></li>
   </ul>
 </nav>
-<form>
-  <input type="url" ng-model="newLink"></input><button ng-click="addLink()">Add</button>
+<form name="form">
+  <input type="url" name= "input" ng-model="newLink"></input>
+  <button ng-click="addLink()">Add</button>
+ <span class="error" ng-show="form.input.$error.required">
+   Required!</span>
+ <span class="error" ng-show="form.input.$error.url">
+   Not valid url!</span>
 </form>
-
 
 </div>
 

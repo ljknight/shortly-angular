@@ -5,6 +5,7 @@ angular.module('shortly.auth', [])
 
 .controller('AuthController', function ($scope, $window, $location, Auth) {
   $scope.user = {};
+  $scope.errors = {};
 
   $scope.signin = function () {
     Auth.signin($scope.user)
@@ -24,7 +25,8 @@ angular.module('shortly.auth', [])
         $location.path('/links');
       })
       .catch(function (error) {
-        console.error(error);
+        $scope.errors.errorMsg = error.data.error;
+        console.log($scope.errors);
       });
   };
 });

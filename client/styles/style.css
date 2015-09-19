@@ -21,10 +21,13 @@ h1 {
   background-color: #eee;
 }
 
+ul {
+  list-style: none;
+}
+
 .navigation ul {
   margin: 0;
   padding: 0;
-  list-style: none;
 }
 
 .navigation li {
@@ -112,7 +115,6 @@ input[type=url] {
 input[type=url]:focus {
   outline: none;
 }
-
 
 .error {
   border: red solid 4px;
