@@ -1,2 +1,2 @@
 #shortly-angular
-This is a project I completed as a student at [hackreactor](http://hackreactor.com). This project was worked on with a pair.
+Adapting a client-server app to use Angular
